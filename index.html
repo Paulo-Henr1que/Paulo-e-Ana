@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#0c1222">
+  <meta name="description" content="Uma história de amor — Paulo & Ana">
+  <title>Mathaus & Sophia 💙</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&family=Dancing+Script:wght@400;700&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background Music -->
+  <audio id="bgMusic" loop preload="auto">
+    <source src="musica/Dave - Raindance (ft. Tems).mp3" type="audio/mpeg">
+  </audio>
+
+  <!-- Mini Music Player -->
+  <button id="musicPlayer" class="music-player" aria-label="Controle de música" style="display:none;">
+    <div class="eq-bars">
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+      <span class="eq-bar"></span>
+    </div>
+    <svg class="pause-icon" viewBox="0 0 24 24" fill="currentColor" width="16" height="16" style="display:none;">
+      <rect x="6" y="4" width="4" height="16" rx="1"/>
+      <rect x="14" y="4" width="4" height="16" rx="1"/>
+    </svg>
+  </button>
+
+  <!-- Floating Hearts Container -->
+  <div id="floatingHearts" class="floating-hearts-container"></div>
+
+  <!-- ═══════════ SECTION 1: BOOK COVER ═══════════ -->
+  <section id="bookCover" class="book-cover-section">
+    <div class="cover-particles" id="coverParticles"></div>
+    <div class="book-wrapper">
+      <div class="book-3d" id="book3d">
+        <!-- Book Spine -->
+        <div class="book-spine"></div>
+        <!-- Book Cover (Front) -->
+        <div class="book-front" id="bookFront">
+          <div class="book-texture"></div>
+          <div class="book-border-ornament"></div>
+          <div class="book-content-cover">
+            <div class="ornament-top">✦</div>
+            <p class="book-subtitle">Uma história de amor</p>
+            <h1 class="book-title">Paulo<br><span class="amp">&</span><br>Ana</h1>
+            <div class="book-heart-divider">
+              <span class="line"></span>
+              <span class="heart">💙</span>
+              <span class="line"></span>
+            </div>
+            <p class="book-year">Desde 2025</p>
+            <div class="ornament-bottom">✦</div>
+          </div>
+        </div>
+        <!-- Book Page (behind cover) -->
+        <div class="book-page-behind">
+          <img src="fotos/foto-01.jpeg" alt="Mathaus e Sophia" class="first-page-photo">
+          <p class="first-page-text">Aqui começa o nosso capítulo...</p>
+        </div>
+      </div>
+      <button id="openBookBtn" class="open-book-btn">
+        <span class="btn-text">Abrir o Livro</span>
+        <span class="btn-heart">💙</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- ═══════════ MAIN STORY CONTENT ═══════════ -->
+  <main id="storyContent" class="story-content">
+
+    <!-- ── SECTION: O COMEÇO ── -->
+    <section class="story-section section-beginning" id="sectionBeginning">
+      <div class="section-photo-hero reveal-up">
+        <img src="fotos/foto-01.jpeg" alt="Nosso começo" loading="lazy">
+        <div class="photo-overlay-gradient"></div>
+      </div>
+      <div class="section-text-block reveal-up">
+        <p class="label-small">O primeiro olhar</p>
+        <h2 class="section-title cursive">30 de Novembro de 2025</h2>
+        <p class="section-body">O instante em que Deus decidiu nos apresentar e tudo mudou para sempre.</p>
+      </div>
+      <div class="counter-container reveal-up" id="liveCounter">
+        <div class="counter-grid">
+          <div class="counter-item">
+            <span class="counter-number" id="counterYears">0</span>
+            <span class="counter-label">Anos</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-number" id="counterMonths">0</span>
+            <span class="counter-label">Meses</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-number" id="counterDays">0</span>
+            <span class="counter-label">Dias</span>
+          </div>
+          <div class="counter-item">
+            <span class="counter-number" id="counterHours">0</span>
+            <span class="counter-label">Horas</span>
+          </div>
+        </div>
+        <p class="counter-subtitle">...e cada segundo vale a pena 💙</p>
+      </div>
+    </section>
+
+    <!-- ── PHOTO 1 ── -->
+    <section class="story-section section-photo reveal-up">
+      <div class="photo-frame frame-full">
+        <img src="fotos/foto-02.jpeg" alt="Nós dois" loading="lazy">
+      </div>
+      <p class="photo-quote cursive">Em um mundo inteiro, meus olhos só procuram você.</p>
+    </section>
+
+    <!-- ── PHOTO 2: Nosso Jeitinho ── -->
+    <section class="story-section section-photo reveal-up">
+      <div class="photo-frame frame-polaroid">
+        <img src="fotos/nosso jeitinho.jpeg" alt="Nosso jeitinho" loading="lazy">
+        <div class="polaroid-caption">nosso jeitinho 💛</div>
+      </div>
+      <p class="photo-quote">O melhor lugar do mundo é do seu lado.</p>
+    </section>
+
+    <!-- ── PHOTO 3 ── -->
+    <section class="story-section section-photo section-dark reveal-up">
+      <div class="photo-frame frame-full">
+        <img src="fotos/foto-03.jpeg" alt="Nosso momento" loading="lazy">
+      </div>
+      <p class="photo-quote cursive">Cada abraço seu me faz esquecer o resto do mundo.</p>
+    </section>
+
+    <!-- ── PHOTO 4 ── -->
+    <section class="story-section section-photo section-immersive reveal-up">
+      <div class="photo-frame frame-cinematic">
+        <img src="fotos/foto-04.jpeg" alt="Minha paz" loading="lazy">
+      </div>
+      <p class="photo-quote large">Você é minha calmaria no meio do caos.</p>
+    </section>
+
+    <!-- ── BIG QUOTE ── -->
+    <section class="story-section section-big-quote" id="bigQuoteSection">
+      <div class="golden-particles" id="goldenParticles"></div>
+      <div class="big-quote-content reveal-up">
+        <p class="big-quote-text" id="bigQuoteText">
+          <span class="word">Não</span>
+          <span class="word">importa</span>
+          <span class="word">o</span>
+          <span class="word">que</span>
+          <span class="word">aconteça,</span>
+          <br>
+          <span class="word highlight">eu</span>
+          <span class="word highlight">sempre</span>
+          <span class="word highlight">escolho</span>
+          <span class="word highlight">você.</span>
+        </p>
+        <div class="quote-heart-ornament">♥</div>
+      </div>
+    </section>
+
+    <!-- ── PHOTO 5 ── -->
+    <section class="story-section section-photo reveal-up">
+      <div class="photo-frame frame-tilted">
+        <img src="fotos/foto-05.jpeg" alt="Parceiros" loading="lazy">
+      </div>
+      <p class="photo-quote">Minha companheira favorita para qualquer aventura.</p>
+    </section>
+
+    <!-- ── PHOTO 6 ── -->
+    <section class="story-section section-photo reveal-up">
+      <div class="photo-frame frame-rounded">
+        <img src="fotos/foto-06.jpeg" alt="Juntos" loading="lazy">
+      </div>
+      <p class="photo-quote cursive">Contigo, qualquer lugar vira o nosso lugar.</p>
+    </section>
+
+    <!-- ── PHOTO 7 ── -->
+    <section class="story-section section-photo section-dark reveal-up">
+      <div class="photo-frame frame-full">
+        <img src="fotos/foto-07.jpeg" alt="Nosso amor" loading="lazy">
+      </div>
+      <p class="photo-quote cursive">Quando penso no futuro, não consigo ver uma vida sem você.</p>
+    </section>
+
+    <!-- ── PHOTO 8: Perfil dela ── -->
+    <section class="story-section section-photo section-immersive reveal-up">
+      <div class="photo-frame frame-oval">
+        <img src="fotos/foto-08.jpeg" alt="Sophia" loading="lazy">
+      </div>
+      <p class="photo-quote large cursive">A dona do sorriso mais lindo que eu já vi.</p>
+    </section>
+
+    <!-- ── NOSSOS NÚMEROS ── -->
+    <section class="story-section section-numbers" id="numbersSection">
+      <h2 class="section-title reveal-up">Nossos Números</h2>
+      <div class="numbers-grid">
+        <div class="number-card reveal-up">
+          <span class="number-value" data-target="169">0</span>
+          <span class="number-label">dias juntos</span>
+        </div>
+        <div class="number-card reveal-up">
+          <span class="number-value" data-target="5">0</span>
+          <span class="number-label">meses de amor</span>
+        </div>
+        <div class="number-card reveal-up">
+          <span class="number-infinity">∞</span>
+          <span class="number-label">Beijos trocados</span>
+        </div>
+        <div class="number-card reveal-up">
+          <span class="number-value-static">2</span>
+          <span class="number-label">Filhos de 4 patas 🐾</span>
+        </div>
+        <div class="number-card reveal-up card-highlight">
+          <span class="number-value-static">1</span>
+          <span class="number-label">certeza: <strong>VOCÊ</strong></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── PHOTO 9 ── -->
+    <section class="story-section section-photo reveal-up">
+      <div class="photo-frame frame-polaroid">
+        <img src="fotos/foto-09.jpeg" alt="Sorriso" loading="lazy">
+        <div class="polaroid-caption">meu mundo inteiro ✨</div>
+      </div>
+      <p class="photo-quote">Só de te ver sorrir, meu dia já valeu.</p>
+    </section>
+
+    <!-- ── NOSSO PARCEIRO DE 4 PATAS ── -->
+    <section class="story-section section-dogs" id="dogsSection">
+      <h2 class="section-title cursive reveal-up">Nossos Parceirinhos 🐾</h2>
+      <p class="section-body reveal-up">Os integrantes mais fofos da família</p>
+      <div class="dogs-grid">
+        <div class="dog-card reveal-up">
+          <div class="dog-photo-wrapper">
+            <img src="dog/Jhonny-01.jpeg" alt="Jhonny" loading="lazy">
+          </div>
+          <h3 class="dog-name">Bella</h3>
+          <span class="dog-paw">🐾</span>
+        </div>
+        <div class="dog-card reveal-up">
+          <div class="dog-photo-wrapper">
+            <img src="dog/Jhonny-02.jpeg" alt="Jhonny" loading="lazy">
+          </div>
+          <h3 class="dog-name">Lisa</h3>
+          <span class="dog-paw">🐾</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── FINAL SECTION ── -->
+    <section class="story-section section-final" id="finalSection">
+      <canvas id="heartRainCanvas"></canvas>
+      <div class="final-content reveal-up">
+        <p class="final-label">Feliz Dia dos Namorados</p>
+        <h2 class="final-title">Te Amo,<br><span class="name-highlight">Ana Luisa</span></h2>
+        <div class="final-heart">💙</div>
+        <p class="final-message">Obrigado por transformar meus dias em algo extraordinário.<br>Hoje, amanhã e sempre.</p>
+        <p class="final-signature">Com muito amor, Paulo</p>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
